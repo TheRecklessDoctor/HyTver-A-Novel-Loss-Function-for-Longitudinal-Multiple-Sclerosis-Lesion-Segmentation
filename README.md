@@ -25,25 +25,25 @@ cd model
 mkdir vnet
 ```
 
-2. Obtain original data from [MSSEG-2](https://portal.fli-iam.irisa.fr/msseg-2/data/) website. The original data should be saved into a folder alongside the CoactSeg folder.
+3. Obtain original data from [MSSEG-2](https://portal.fli-iam.irisa.fr/msseg-2/data/) website. The original data should be saved into a folder alongside the CoactSeg folder.
 
-3. Get HD-BET as per instructions given in their [repository](https://github.com/MIC-DKFZ/HD-BET). If you are cloning the repo and not installing the package, HD-BET should be cloned alongside the CoactSeg folder and not inside it.
+4. Get HD-BET as per instructions given in their [repository](https://github.com/MIC-DKFZ/HD-BET). If you are cloning the repo and not installing the package, HD-BET should be cloned alongside the CoactSeg folder and not inside it.
 
-4. Run HD-BET skull-stripping as follows  
+5. Run HD-BET skull-stripping as follows  
 ```
 cd HD-BET
 bash ../run-HD-BET.sh name_of_original_data_folder name_of_folder_to_store_skull-stripped_data
 ```
 
-5. Go back to the top-level directory and copy skull-stripped folder to data folder inside CoactSeg
+6. Go back to the top-level directory and copy skull-stripped folder to data folder inside CoactSeg
 ```
 cd ../
 cp -r name_of_skull-stripped_folder ./CoactSeg/data/MSSEG2/h5/
 ```
 
-6. Modify the file "./CoactSeg/data/MSSEG2/h5/pre_processing.py" to include the paths to the data folders as specified in the file pre_processing.py.
+7. Modify the file "./CoactSeg/data/MSSEG2/h5/pre_processing.py" to include the paths to the data folders as specified in the file pre_processing.py.
 
-7. Run the preprocessing script
+8. Run the preprocessing script
 ```
 bash runPreprocess.sh
 ```
