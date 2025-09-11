@@ -9,12 +9,20 @@ This repository is for our paper "HyTver:  A Novel Loss Function for Longitudina
 ### Environment
 This repository is based on PyTorch 2.4.0, CUDA 12.4, and Python 3.11.0. All experiments in our paper were conducted on a single NVIDIA A5000 GPU with the experiment settings being identical. 
 
-### Data Preparation
+### Data and Preparation
 Please follow the instructions given [here](https://github.com/ycwu1997/CoactSeg/) for the data preparation and data split. The dataset itself is the [MSSEG-2](https://portal.fli-iam.irisa.fr/msseg-2/data/) which you have to obtain from the site. To perform skull-stripping please download and use [HD-BET](https://github.com/MIC-DKFZ/HD-BET). We use the python package version as specified in the repository. Detailed steps to preprocess the data are provided below.
 
 1. Clone repository
 ```
 git clone https://github.com/TheRecklessDoctor/HyTver 
+```
+
+2. add a folder inside CoactSeg called model and another one inside model called vnet
+```
+cd CoactSeg
+mkdir model
+cd model
+mkdir vnet
 ```
 
 2. Obtain original data from [MSSEG-2](https://portal.fli-iam.irisa.fr/msseg-2/data/) website. The original data should be saved into a folder alongside the CoactSeg folder.
