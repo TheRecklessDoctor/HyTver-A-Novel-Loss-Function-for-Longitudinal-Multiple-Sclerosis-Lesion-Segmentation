@@ -1,15 +1,20 @@
-# HyTver
-by Dayan Perera, Ting Fung Fung and Vishnu Monn Baskaran.
+<div align="center">
+    <h2>HyTver:  A Novel Loss Function for Longitudinal Multiple Sclerosis Lesion Segmentation</h2>
+</div>
+
+<p align="center">
+    <a href="https://arxiv.org/abs/2508.17639" alt="arXiv">
+    <img src="https://img.shields.io/badge/arXiv-2507.10999-b31b1b.svg?style=flat" /></a>
+</p>
 
 
-
-### Introduction
+### 1. Introduction
 This repository is for our paper "HyTver:  A Novel Loss Function for Longitudinal Multiple Sclerosis Lesion Segmentation.", which was accepted at APSIPA 2025.
 
-### Environment
+### 2. Environment
 This repository is based on PyTorch 2.4.0, CUDA 12.4, and Python 3.11.0. All experiments in our paper were conducted on a single NVIDIA A5000 GPU with the experiment settings being identical. 
 
-### Data and Preparation
+### 3. Data and Preparation
 Please follow the instructions given [here](https://github.com/ycwu1997/CoactSeg/) for the data preparation and data split. The dataset itself is the [MSSEG-2](https://portal.fli-iam.irisa.fr/msseg-2/data/) which you have to obtain from the site. To perform skull-stripping please download and use [HD-BET](https://github.com/MIC-DKFZ/HD-BET). We use the python package version as specified in the repository. Detailed steps to preprocess the data are provided below.
 
 1. Clone repository
@@ -49,7 +54,7 @@ bash runPreprocess.sh
 ```
 
 
-### Running the model
+### 4. Running the model
 
 1. Go into the CoactSeg folder
 ```
@@ -80,3 +85,16 @@ bash train_mixed.sh
     * weightedce
     * dicepp - we didn't test completely as the time to run an iteration was significantly greater compared to the others.
     * hdloss
+
+### 5. Citation
+If you find this repository or our work helpful, please consider citing:
+```
+@inproceedings{
+  title={HyTver: A Novel Loss Function for Longitudinal Multiple Sclerosis Lesion Segmentation},
+  author={Perera, Dayan and Ting, Fung Fung and Baskaran, Vishnu Monn},
+  booktitle={2015 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA)},
+  pages={to appear},
+  year={2025},
+  organization={IEEE}
+}
+```
